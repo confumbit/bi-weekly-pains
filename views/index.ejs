@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow" />
+    <meta name="url" content="https://ashow.herokuapp.com/">
+    <meta name="type" content="website">
+    <meta name="image" content="/favicon.png">
+    <meta name="description" content="A blog where two people account the drudgery they have undertaken in the last bi-week.">
+    <meta name="og:url" content="https://ashow.herokuapp.com/">
+    <meta name="og:type" content="website">
+    <meta name="og:image" content="/favicon.png">
+    <meta name="og:description" content="A blog where two people account the drudgery they have undertaken in the last bi-week.">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.png">
+    <link rel="stylesheet" href="/style.css">
+    <title>As How</title>
+</head>
+<body>
+   <a href="/"><img src="/favicon.png" alt="logo- As How" class="logo"></a>
+   <div class="header">
+       <h1>Bi-weekly Pains</h1>
+       <br>
+       <h4><i>A blog where two people account the drudgery they have undertaken in the last bi-week.</i></h4>
+   </div>
+   <h2 class="listTitle">Blog Posts</h2>
+   <dl class="blogList">
+        <%
+        posts.forEach((post) => {
+        %>
+
+            <% let date = post.date.toLocaleDateString() %>
+            <% let time = post.date.toLocaleTimeString() %>
+            <a href=<%= "/blog/"+post._id %> >
+                <dt><span><%= post.title %></span><span><%= date %>&nbsp;&nbsp;&nbsp;&nbsp;<%= time %></span></dt>
+                <dd><%= post.subtitle %></dd>
+            </a>
+       <%
+        });
+       %>
+   </dl>
+</body>
+</html>

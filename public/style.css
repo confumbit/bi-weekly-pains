@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 20px;
+}
+.logo{
+  position: absolute;
+  width: 30px;
+  cursor: pointer;
+}
+.header {
+  text-align: center;
+}
+.listTitle {
+  margin: 80px 0 40px 0;
+}
+dl dt {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+dl dd {
+  margin-left: 60px;
+}
+.form {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100vw;
+  height: 700px;
+  margin-top: 100px;
+  padding-left: 50px;
+}
+input{
+  width: 250px;
+}
+.article {
+  width: 80%;
+  height: 500px;
+}
+.blog{
+  padding: 0 100px;
+}
