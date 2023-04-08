@@ -26,7 +26,7 @@ app.get("/", (request, response) => {
     if (err) throw err;
     let dbo = db.db("pain-tea-blog");
     dbo
-      .collection("posts")
+      .collection("blogs")
       .find({})
       .toArray((err, res) => {
         if (err) throw err;
@@ -41,7 +41,7 @@ app.get("/blog/:id", (request, response) => {
     if (err) throw err;
     let dbo = db.db("pain-tea-blog");
     let id = require("mongodb").ObjectId(request.params.id);
-    dbo.collection("posts").findOne({ _id: id }, (err, res) => {
+    dbo.collection("blogs").findOne({ _id: id }, (err, res) => {
       if (err) throw err;
       console.log(res);
       response.render("blog", { post: res });
@@ -64,7 +64,7 @@ app.post("/add", (req, res) => {
   MongoClient.connect(process.env.DB_URL, (err, db) => {
     if (err) throw err;
     let dbo = db.db("pain-tea-blog");
-    dbo.collection("posts").insertOne(obj, (err, res) => {
+    dbo.collection("blogs").insertOne(obj, (err, res) => {
       if (err) throw err;
       console.log("Data inserted successfully.");
       db.close();

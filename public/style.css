@@ -45,6 +45,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
 }
 .blogpage {
   margin-bottom: 50px;
@@ -53,7 +54,7 @@ body {
   font-size: 16px;
 }
 .blogpage img {
-width: 64px;
+  width: 64px;
 }
 .listTitle {
   margin: 80px 0 40px 0;
@@ -64,18 +65,42 @@ dl:hover {
 }
 dl dt {
   margin-top: 20px;
-  font-size: 24px;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
   padding: 0 40px;
+  font-weight: bold;
+  font-size: 24px;
 }
 dl dd {
   margin-left: 60px;
 }
-.deets{
+@media screen and (max-width: 800px) {
+  dl dt {
+    padding: 0;
+    flex-direction: column;
+    font-size: 16px;
+    margin-bottom: 13px;
+  }
+  dl dt .titular {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  dl dd {
+    margin: 0;
+    font-size: 14px;
+  }
+}
+.deets {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (max-width: 400px) {
+  .deets {
+    font-size: 14px;
+  }
 }
 .form {
   display: flex;
@@ -95,5 +120,10 @@ input {
   height: 500px;
 }
 .blog {
-  padding: 0 100px;
+  padding: 0 80px;
+}
+@media screen and (max-width: 600px) {
+  .blog {
+    padding: 0 10px;
+  }
 }

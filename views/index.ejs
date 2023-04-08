@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow" />
-    <meta name="url" content="https://paintea.render.com/">
+    <meta name="url" content="https://paintea.onrender.com/">
     <meta name="type" content="website">
     <meta name="image" content="/favicon.png">
     <meta name="description" content="A blog where two people share tea about the pain that has befallen them in recent times.">
-    <meta name="og:url" content="https://paintea.render.com/">
+    <meta name="og:url" content="https://paintea.onrender.com/">
     <meta name="og:type" content="website">
     <meta name="og:image" content="/favicon.png">
     <meta name="og:description" content="A blog where two people share tea about the pain that has befallen them in recent times.">
@@ -21,7 +21,7 @@
 <body>
    <div class="header">
         <a href="/">
-            <img src="/favicon.png" alt="logo- As How" class="logo">
+            <img src="/logo.png" alt="logo- As How" class="logo">
             <div class="blog-name">pain tea</div>
             <i>A blog where two people share tea about the pain that has befallen them in recent times.</i>
         </a>
@@ -35,7 +35,7 @@
             <% let date = post.date.toLocaleDateString() %>
             <% let time = post.date.toLocaleTimeString() %>
             <a href=<%= "/blog/"+post._id %> >
-                <dt><span><%= post.title %></span><span><%= date %>&nbsp;&nbsp;&nbsp;&nbsp;<%= time %></span></dt>
+                <dt><span class="titular"><%= post.title %></span><span><%= date %>&nbsp;&nbsp;&nbsp;&nbsp;<%= time %></span></dt>
                 <dd><%= post.subtitle %></dd>
             </a>
        <%
