@@ -1,32 +1,81 @@
+@font-face {
+  font-family: "cmserif";
+  src: url("cmufont/cmunrm.woff") format("woff");
+}
+@font-face {
+  font-family: "cmserif";
+  src: url("cmufont/cmunbx.woff") format("woff");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "cmserif";
+  src: url("cmufont/cmunbi.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "cmserif";
+  src: url("cmufont/cmunti.woff") format("woff");
+  font-style: italic;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: cmserif;
+  text-decoration: none;
+}
+a {
+  color: #000000;
 }
 body {
   padding: 20px;
+  min-height: 100vh;
+  background-color: #fdf5f3;
 }
-.logo{
-  position: absolute;
-  width: 30px;
+.logo {
   cursor: pointer;
 }
-.header {
-  text-align: center;
+.blog-name {
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+.header a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.blogpage {
+  margin-bottom: 50px;
+}
+.blogpage .blog-name {
+  font-size: 16px;
+}
+.blogpage img {
+width: 64px;
 }
 .listTitle {
   margin: 80px 0 40px 0;
+  font-size: 24px;
+}
+dl:hover {
+  opacity: 0.7;
 }
 dl dt {
   margin-top: 20px;
-  font-weight: bold;
-  font-size: 18px;
+  font-size: 24px;
   display: flex;
   justify-content: space-between;
   padding: 0 40px;
 }
 dl dd {
   margin-left: 60px;
+}
+.deets{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .form {
   display: flex;
@@ -38,13 +87,13 @@ dl dd {
   margin-top: 100px;
   padding-left: 50px;
 }
-input{
+input {
   width: 250px;
 }
 .article {
   width: 80%;
   height: 500px;
 }
-.blog{
+.blog {
   padding: 0 100px;
 }

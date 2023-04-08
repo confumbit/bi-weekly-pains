@@ -5,27 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow" />
-    <meta name="url" content="https://ashow.herokuapp.com/">
+    <meta name="url" content="https://paintea.render.com/">
     <meta name="type" content="website">
     <meta name="image" content="/favicon.png">
-    <meta name="description" content="A blog where two people account the drudgery they have undertaken in the last bi-week.">
-    <meta name="og:url" content="https://ashow.herokuapp.com/">
+    <meta name="description" content="A blog where two people share tea about the pain that has befallen them in recent times.">
+    <meta name="og:url" content="https://paintea.render.com/">
     <meta name="og:type" content="website">
     <meta name="og:image" content="/favicon.png">
-    <meta name="og:description" content="A blog where two people account the drudgery they have undertaken in the last bi-week.">
+    <meta name="og:description" content="A blog where two people share tea about the pain that has befallen them in recent times.">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
     <link rel="icon" href="/favicon.png">
     <link rel="stylesheet" href="/style.css">
-    <title>Bi-weekly Pains</title>
+    <title>Pain Tea</title>
 </head>
 <body>
-   <a href="/"><img src="/favicon.png" alt="logo- As How" class="logo"></a>
    <div class="header">
-       <h1>Bi-weekly Pains</h1>
-       <br>
-       <h4><i>A blog where two people account the drudgery they have undertaken in the last bi-week.</i></h4>
+        <a href="/">
+            <img src="/favicon.png" alt="logo- As How" class="logo">
+            <div class="blog-name">pain tea</div>
+            <i>A blog where two people share tea about the pain that has befallen them in recent times.</i>
+        </a>
    </div>
-   <h2 class="listTitle">Blog Posts</h2>
+   <div class="listTitle">Blog Posts</div>
    <dl class="blogList">
         <%
         posts.forEach((post) => {
