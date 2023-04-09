@@ -24,9 +24,9 @@ app.set("view engine", "ejs");
 app.get("/", (request, response) => {
   MongoClient.connect(process.env.DB_URL, (err, db) => {
     if (err) throw err;
-    let dbo = db.db("pain-tea-blog");
+    let dbo = db.db("as-how-blog");
     dbo
-      .collection("blogs")
+      .collection("posts")
       .find({})
       .toArray((err, res) => {
         if (err) throw err;
